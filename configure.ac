@@ -4,7 +4,7 @@
 AC_PREREQ([2.69])
 AC_INIT([fuse-tutorial], [2018-02-04], [joseph@pfeifferfamily.net])
 AM_INIT_AUTOMAKE
-AC_CONFIG_SRCDIR([src/bbfs.c])
+AC_CONFIG_SRCDIR([src/tweakfs.c])
 AC_CONFIG_HEADERS([src/config.h])
 
 # Checks for programs.

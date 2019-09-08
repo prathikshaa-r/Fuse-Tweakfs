@@ -86,7 +86,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-bin_PROGRAMS = bbfs$(EXEEXT)
+bin_PROGRAMS = tweakfs$(EXEEXT)
 subdir = src
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
@@ -99,10 +99,10 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_bbfs_OBJECTS = bbfs.$(OBJEXT) log.$(OBJEXT)
-bbfs_OBJECTS = $(am_bbfs_OBJECTS)
-bbfs_LDADD = $(LDADD)
-bbfs_DEPENDENCIES =
+am_tweakfs_OBJECTS = tweakfs.$(OBJEXT) log.$(OBJEXT)
+tweakfs_OBJECTS = $(am_tweakfs_OBJECTS)
+tweakfs_LDADD = $(LDADD)
+tweakfs_DEPENDENCIES =
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -131,8 +131,8 @@ AM_V_CCLD = $(am__v_CCLD_$(V))
 am__v_CCLD_ = $(am__v_CCLD_$(AM_DEFAULT_VERBOSITY))
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(bbfs_SOURCES)
-DIST_SOURCES = $(bbfs_SOURCES)
+SOURCES = $(tweakfs_SOURCES)
+DIST_SOURCES = $(tweakfs_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -161,12 +161,12 @@ CTAGS = ctags
 am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/config.h.in \
 	$(top_srcdir)/depcomp
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/pr109/ece566-esa/fuse-tutorial-2018-02-04/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/pr109/ece566-esa/tweakfs/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} /home/pr109/ece566-esa/fuse-tutorial-2018-02-04/missing autoconf
-AUTOHEADER = ${SHELL} /home/pr109/ece566-esa/fuse-tutorial-2018-02-04/missing autoheader
-AUTOMAKE = ${SHELL} /home/pr109/ece566-esa/fuse-tutorial-2018-02-04/missing automake-1.15
+AUTOCONF = ${SHELL} /home/pr109/ece566-esa/tweakfs/missing autoconf
+AUTOHEADER = ${SHELL} /home/pr109/ece566-esa/tweakfs/missing autoheader
+AUTOMAKE = ${SHELL} /home/pr109/ece566-esa/tweakfs/missing automake-1.15
 AWK = mawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -193,7 +193,7 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/pr109/ece566-esa/fuse-tutorial-2018-02-04/missing makeinfo
+MAKEINFO = ${SHELL} /home/pr109/ece566-esa/tweakfs/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = fuse-tutorial
@@ -211,10 +211,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = 
 VERSION = 2018-02-04
-abs_builddir = /home/pr109/ece566-esa/fuse-tutorial-2018-02-04/src
-abs_srcdir = /home/pr109/ece566-esa/fuse-tutorial-2018-02-04/src
-abs_top_builddir = /home/pr109/ece566-esa/fuse-tutorial-2018-02-04
-abs_top_srcdir = /home/pr109/ece566-esa/fuse-tutorial-2018-02-04
+abs_builddir = /home/pr109/ece566-esa/tweakfs/src
+abs_srcdir = /home/pr109/ece566-esa/tweakfs/src
+abs_top_builddir = /home/pr109/ece566-esa/tweakfs
+abs_top_srcdir = /home/pr109/ece566-esa/tweakfs
 ac_ct_CC = gcc
 am__include = include
 am__leading_dot = .
@@ -222,18 +222,18 @@ am__quote =
 am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
 bindir = ${exec_prefix}/bin
-build_alias = 
+build_alias = and
 builddir = .
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host_alias = 
+host_alias = and
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/pr109/ece566-esa/fuse-tutorial-2018-02-04/install-sh
+install_sh = ${SHELL} /home/pr109/ece566-esa/tweakfs/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -250,11 +250,11 @@ sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
 srcdir = .
 sysconfdir = ${prefix}/etc
-target_alias = 
+target_alias = and
 top_build_prefix = ../
 top_builddir = ..
 top_srcdir = ..
-bbfs_SOURCES = bbfs.c log.c log.h  params.h
+tweakfs_SOURCES = tweakfs.c log.c log.h  params.h
 AM_CFLAGS = -D_FILE_OFFSET_BITS=64 -I/usr/include/fuse
 LDADD = -lfuse -pthread
 all: config.h
@@ -349,9 +349,9 @@ uninstall-binPROGRAMS:
 clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
 
-bbfs$(EXEEXT): $(bbfs_OBJECTS) $(bbfs_DEPENDENCIES) $(EXTRA_bbfs_DEPENDENCIES) 
-	@rm -f bbfs$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(bbfs_OBJECTS) $(bbfs_LDADD) $(LIBS)
+tweakfs$(EXEEXT): $(tweakfs_OBJECTS) $(tweakfs_DEPENDENCIES) $(EXTRA_tweakfs_DEPENDENCIES) 
+	@rm -f tweakfs$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(tweakfs_OBJECTS) $(tweakfs_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -359,8 +359,8 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include ./$(DEPDIR)/bbfs.Po
 include ./$(DEPDIR)/log.Po
+include ./$(DEPDIR)/tweakfs.Po
 
 .c.o:
 	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<

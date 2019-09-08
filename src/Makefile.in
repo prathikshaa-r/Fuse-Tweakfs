@@ -86,7 +86,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-bin_PROGRAMS = bbfs$(EXEEXT)
+bin_PROGRAMS = tweakfs$(EXEEXT)
 subdir = src
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
@@ -99,10 +99,10 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_bbfs_OBJECTS = bbfs.$(OBJEXT) log.$(OBJEXT)
-bbfs_OBJECTS = $(am_bbfs_OBJECTS)
-bbfs_LDADD = $(LDADD)
-bbfs_DEPENDENCIES =
+am_tweakfs_OBJECTS = tweakfs.$(OBJEXT) log.$(OBJEXT)
+tweakfs_OBJECTS = $(am_tweakfs_OBJECTS)
+tweakfs_LDADD = $(LDADD)
+tweakfs_DEPENDENCIES =
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -131,8 +131,8 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(bbfs_SOURCES)
-DIST_SOURCES = $(bbfs_SOURCES)
+SOURCES = $(tweakfs_SOURCES)
+DIST_SOURCES = $(tweakfs_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -254,7 +254,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-bbfs_SOURCES = bbfs.c log.c log.h  params.h
+tweakfs_SOURCES = tweakfs.c log.c log.h  params.h
 AM_CFLAGS = @FUSE_CFLAGS@
 LDADD = @FUSE_LIBS@
 all: config.h
@@ -349,9 +349,9 @@ uninstall-binPROGRAMS:
 clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
 
-bbfs$(EXEEXT): $(bbfs_OBJECTS) $(bbfs_DEPENDENCIES) $(EXTRA_bbfs_DEPENDENCIES) 
-	@rm -f bbfs$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(bbfs_OBJECTS) $(bbfs_LDADD) $(LIBS)
+tweakfs$(EXEEXT): $(tweakfs_OBJECTS) $(tweakfs_DEPENDENCIES) $(EXTRA_tweakfs_DEPENDENCIES) 
+	@rm -f tweakfs$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(tweakfs_OBJECTS) $(tweakfs_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -359,8 +359,8 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bbfs.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/log.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tweakfs.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
