@@ -13,7 +13,7 @@
 # PARTICULAR PURPOSE.
 
 
-
+VPATH = ../../../html
 am__is_gnu_make = { \
   if test -z '$(MAKELEVEL)'; then \
     false; \
@@ -117,12 +117,12 @@ am__can_run_installinfo = \
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 am__DIST_COMMON = $(srcdir)/Makefile.in
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/pr109/ece566-esa/tweakfs/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/pr109/ece566-esa/tweakfs/tweakfs-2019-09-09/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} /home/pr109/ece566-esa/tweakfs/missing autoconf
-AUTOHEADER = ${SHELL} /home/pr109/ece566-esa/tweakfs/missing autoheader
-AUTOMAKE = ${SHELL} /home/pr109/ece566-esa/tweakfs/missing automake-1.15
+AUTOCONF = ${SHELL} /home/pr109/ece566-esa/tweakfs/tweakfs-2019-09-09/missing autoconf
+AUTOHEADER = ${SHELL} /home/pr109/ece566-esa/tweakfs/tweakfs-2019-09-09/missing autoheader
+AUTOMAKE = ${SHELL} /home/pr109/ece566-esa/tweakfs/tweakfs-2019-09-09/missing automake-1.15
 AWK = mawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -149,7 +149,7 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/pr109/ece566-esa/tweakfs/missing makeinfo
+MAKEINFO = ${SHELL} /home/pr109/ece566-esa/tweakfs/tweakfs-2019-09-09/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = tweakfs
@@ -167,10 +167,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = 
 VERSION = 2019-09-09
-abs_builddir = /home/pr109/ece566-esa/tweakfs/html
-abs_srcdir = /home/pr109/ece566-esa/tweakfs/html
-abs_top_builddir = /home/pr109/ece566-esa/tweakfs
-abs_top_srcdir = /home/pr109/ece566-esa/tweakfs
+abs_builddir = /home/pr109/ece566-esa/tweakfs/tweakfs-2019-09-09/_build/sub/html
+abs_srcdir = /home/pr109/ece566-esa/tweakfs/tweakfs-2019-09-09/_build/sub/../../html
+abs_top_builddir = /home/pr109/ece566-esa/tweakfs/tweakfs-2019-09-09/_build/sub
+abs_top_srcdir = /home/pr109/ece566-esa/tweakfs/tweakfs-2019-09-09/_build/sub/../..
 ac_ct_CC = gcc
 am__include = include
 am__leading_dot = .
@@ -178,18 +178,18 @@ am__quote =
 am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
 bindir = ${exec_prefix}/bin
-build_alias = and
+build_alias = 
 builddir = .
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host_alias = and
+host_alias = 
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/pr109/ece566-esa/tweakfs/install-sh
+install_sh = ${SHELL} /home/pr109/ece566-esa/tweakfs/tweakfs-2019-09-09/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -198,18 +198,18 @@ mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /usr/local
+prefix = /home/pr109/ece566-esa/tweakfs/tweakfs-2019-09-09/_inst
 program_transform_name = s,x,x,
 psdir = ${docdir}
 runstatedir = ${localstatedir}/run
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
-srcdir = .
+srcdir = ../../../html
 sysconfdir = ${prefix}/etc
-target_alias = and
+target_alias = 
 top_build_prefix = ../
 top_builddir = ..
-top_srcdir = ..
+top_srcdir = ../../..
 EXTRA_DIST = callbacks.html files.html index.html init.html private.html running.html security.html thanks.html unclear.html
 all: all-am
 
